@@ -1,0 +1,101 @@
+aisal@faisal-virtual-machine:~/OpenROAD-flow-scripts/flow$ history 100
+  433  mkdir comparator
+  434  cd comparator/
+  435  gedit comparator.v
+  436  cd ../..
+  437  cd ..
+  438  make clean_all DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk
+  439  make DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk
+  440  make DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk gui_final
+  441  cd designs/
+  442  ls
+  443  cd sky130hd
+  444  ls
+  445  cd comparator/
+  446  gedit constraint.sdc 
+  447  cd ../../..
+  448  make clean_all DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk
+  449  make DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk
+  450  make DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk gui_final
+  451  history 50
+  452  make DESIGN_CONFIG=./designs/sky130hd/comparator/config.mk gui_final
+  453  cd 
+  454  klayout
+  455  gedit testbench.sv
+  456  gedit testbench.sv
+  457  cd OpenROAD-flow-scripts/
+  458  ls
+  459  cd flow/designs/src
+  460  ls
+  461  mkdir demux
+  462  cd demux
+  463  gedit demux.v
+  464  ls
+  465  cd ../..
+  466  cd sky130hd
+  467  ls
+  468  mkdir demux
+  469  cd demux
+  470  ls
+  471  cp -rf ../gcd/* .
+  472  ls
+  473  gedit config.mk
+  474  gedit constraint.sdc 
+  475  ls
+  476  cd ../..
+  477  cd ..
+  478  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  479  cd designs/src
+  480  ls
+  481  cd demux
+  482  ls
+  483  cd ../..
+  484  cd ..
+  485  ls
+  486  cd designs/
+  487  ls
+  488  cd sky130hd
+  489  ls
+  490  cd demux
+  491  ls
+  492  gedit config.mk 
+  493  gedit constraint.sdc 
+  494  cd ../..
+  495  cd ..
+  496  make clean_all  DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  497  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  498  cd design
+  499  ls
+  500  cd designs
+  501  ls
+  502  cd src
+  503  ls
+  504  cd demux
+  505  ls
+  506  gedit demux.v
+  507  cd ../..
+  508  cd ..
+  509  make clean_all  DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  510  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  511  cd designs/sky130hd
+  512  ls
+  513  cd demux/
+  514  ls
+  515  gedit config.mk 
+  516  cd ../../..
+  517  make clean_all  DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  518  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  519  cd designs/sky130hd
+  520  cd demux/
+  521  gedit config.mk 
+  522  cd ../../..
+  523  make clean_all  DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  524  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  525  cd designs/sky130hd
+  526  cd demux/
+  527  gedit config.mk 
+  528  cd ../../..
+  529  make clean_all  DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  530  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk
+  531  make DESIGN_CONFIG=./designs/sky130hd/demux/config.mk gui_final
+  532  history 100

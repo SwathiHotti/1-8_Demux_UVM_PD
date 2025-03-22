@@ -1,0 +1,132 @@
+
+==========================================================================
+global place report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+global place report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+global place report_worst_slack
+--------------------------------------------------------------------------
+worst slack 1.22
+
+==========================================================================
+global place report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: s2 (input port clocked by core_clock)
+Endpoint: y0 (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.50    0.50 ^ input external delay
+     8    0.02    0.00    0.00    0.50 ^ s2 (in)
+                                         s2 (net)
+                  0.00    0.00    0.50 ^ _0_/A (sky130_fd_sc_hd__nor4b_2)
+     1    0.01    0.03    0.03    0.53 v _0_/Y (sky130_fd_sc_hd__nor4b_2)
+                                         y0 (net)
+                  0.03    0.00    0.53 v y0 (out)
+                                  0.53   data arrival time
+
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                         -0.50   -0.50   output external delay
+                                 -0.50   data required time
+-----------------------------------------------------------------------------
+                                 -0.50   data required time
+                                 -0.53   data arrival time
+-----------------------------------------------------------------------------
+                                  1.03   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: s2 (input port clocked by core_clock)
+Endpoint: y0 (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.50    0.50 v input external delay
+     8    0.02    0.00    0.00    0.50 v s2 (in)
+                                         s2 (net)
+                  0.00    0.00    0.50 v _0_/A (sky130_fd_sc_hd__nor4b_2)
+     1    0.01    0.23    0.28    0.78 ^ _0_/Y (sky130_fd_sc_hd__nor4b_2)
+                                         y0 (net)
+                  0.23    0.00    0.78 ^ y0 (out)
+                                  0.78   data arrival time
+
+                  0.00    2.50    2.50   clock core_clock (rise edge)
+                          0.00    2.50   clock network delay (ideal)
+                          0.00    2.50   clock reconvergence pessimism
+                         -0.50    2.00   output external delay
+                                  2.00   data required time
+-----------------------------------------------------------------------------
+                                  2.00   data required time
+                                 -0.78   data arrival time
+-----------------------------------------------------------------------------
+                                  1.22   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: s2 (input port clocked by core_clock)
+Endpoint: y0 (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.50    0.50 v input external delay
+     8    0.02    0.00    0.00    0.50 v s2 (in)
+                                         s2 (net)
+                  0.00    0.00    0.50 v _0_/A (sky130_fd_sc_hd__nor4b_2)
+     1    0.01    0.23    0.28    0.78 ^ _0_/Y (sky130_fd_sc_hd__nor4b_2)
+                                         y0 (net)
+                  0.23    0.00    0.78 ^ y0 (out)
+                                  0.78   data arrival time
+
+                  0.00    2.50    2.50   clock core_clock (rise edge)
+                          0.00    2.50   clock network delay (ideal)
+                          0.00    2.50   clock reconvergence pessimism
+                         -0.50    2.00   output external delay
+                                  2.00   data required time
+-----------------------------------------------------------------------------
+                                  2.00   data required time
+                                 -0.78   data arrival time
+-----------------------------------------------------------------------------
+                                  1.22   slack (MET)
+
+
+
+==========================================================================
+global place report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          4.52e-06   7.75e-07   3.36e-11   5.29e-06 100.0%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  4.52e-06   7.75e-07   3.36e-11   5.29e-06 100.0%
+                          85.4%      14.6%       0.0%
